@@ -8,8 +8,8 @@ Every argument is operator like `{operator}={parameter}`.
 
 ### Supported services
 
-* [api.github.com](https://developer.github.com/v3/).
-* [www.reddit.com](https://www.reddit.com/dev/api/).
+* [api.github.com](https://developer.github.com/v3/)
+* [www.reddit.com](https://www.reddit.com/dev/api/)
 
 `source={uri}` - load data from service. 
 
