@@ -102,7 +102,7 @@ INSERT INTO domains_stat (`domain`,`count!id`,`sum!score`) VALUES( "maxencec.git
 
 ## To do
 
-* Separate aggregation functions to files.
+* Separate aggregation functions to files (like collations).
 * Filtering support.
 * [Tree format](https://github.com/nin-jin/tree.d) support.
 * Local sources support.
