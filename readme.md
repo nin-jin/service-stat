@@ -8,16 +8,16 @@ Every argument is operator like `{operator}={parameter}`.
 
 ### Supported services
 
-`github={uri}` - [GitHub](https://developer.github.com/v3/).
-`reddit={uri}` - [Reddit](https://www.reddit.com/dev/api/).
+* `github={uri}` - [GitHub](https://developer.github.com/v3/).
+* `reddit={uri}` - [Reddit](https://www.reddit.com/dev/api/).
 
 ### Supported output formats
 
-`format=json` - [JSON](https://en.wikipedia.org/wiki/JSON)
-`format=csv` - [CSV](https://en.wikipedia.org/wiki/Comma-separated_values)
-`format=tsv` - [TSV](https://en.wikipedia.org/wiki/Tab-separated_values)
-`format=ssv` - [DSV](https://en.wikipedia.org/wiki/Delimiter-separated_values) with semicolon separator.
-`format=sql` - [SQL](https://en.wikipedia.org/wiki/SQL). You can specify name of table by `name={name}` operator before.
+* `format=json` - [JSON](https://en.wikipedia.org/wiki/JSON)
+* `format=csv` - [CSV](https://en.wikipedia.org/wiki/Comma-separated_values)
+* `format=tsv` - [TSV](https://en.wikipedia.org/wiki/Tab-separated_values)
+* `format=ssv` - [DSV](https://en.wikipedia.org/wiki/Delimiter-separated_values) with semicolon separator.
+* `format=sql` - [SQL](https://en.wikipedia.org/wiki/SQL). You can specify name of table by `name={name}` operator before.
 
 ### Supported transformers
 
@@ -27,8 +27,8 @@ Every argument is operator like `{operator}={parameter}`.
 
 Orientations: 
 
-`>` - greater to lower
-`<` - lower to greater. 
+* `>` - greater to lower
+* `<` - lower to greater. 
 
 You can stack multiple fields: `sort=score>id<`.
 
@@ -46,10 +46,10 @@ You can use some functions to evaluate value: `group=author project=author,last!
 
 ##### Functions
 
-`first!{field}` - `field` value of first row in group.
-`last!{field}` - `field` value of last row in group.
-`count!{field}` - count of distinct `field` values of rows in group.
-`sum!{field}` - sum of `field` values of rows in group.
+* `first!{field}` - `field` value of first row in group.
+* `last!{field}` - `field` value of last row in group.
+* `count!{field}` - count of distinct `field` values of rows in group.
+* `sum!{field}` - sum of `field` values of rows in group.
 
 ### Slicing
 
