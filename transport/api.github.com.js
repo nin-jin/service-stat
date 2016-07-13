@@ -1,6 +1,6 @@
 'use strict';
 
-var TransportCommon = require( './common' );
+var TransportCommon = require( '../transport' );
 
 module.exports = class TransportGitHub extends TransportCommon {
     

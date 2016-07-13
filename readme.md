@@ -8,8 +8,10 @@ Every argument is operator like `{operator}={parameter}`.
 
 ### Supported services
 
-* `github={uri}` - [GitHub](https://developer.github.com/v3/).
-* `reddit={uri}` - [Reddit](https://www.reddit.com/dev/api/).
+* [api.github.com](https://developer.github.com/v3/).
+* [www.reddit.com](https://www.reddit.com/dev/api/).
+
+`source={uri}` - load data from service. 
 
 ### Supported output formats
 
@@ -60,7 +62,7 @@ You can use some functions to evaluate value: `group=author project=author,last!
 Top 10 "jin" users on GitHub:
 
 ```
-node . github=https://api.github.com/search/users?q=jin project=score,login order=score> top=10 format=tsv
+node . source=https://api.github.com/search/users?q=jin project=score,login order=score> top=10 format=tsv
 ```
 
 ```
@@ -79,7 +81,7 @@ node . github=https://api.github.com/search/users?q=jin project=score,login orde
 Popular domains in "javascript" subreddit in SQL format:
 
 ```
-node . reddit=http://www.reddit.com/r/javascript/.json group=domain project=domain,count!id,sum!score order=count!id>sum!score> name=domains_stat format=sql
+node . source=http://www.reddit.com/r/javascript/.json group=domain project=domain,count!id,sum!score order=count!id>sum!score> name=domains_stat format=sql
 ```
 
 ```

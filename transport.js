@@ -3,9 +3,9 @@
 var Future = require( 'fibers/future' );
 var Fetch = require( 'fetch-promise' );
 
-var Table = require( '../table' );
+var Table = require( './table' );
 
-module.exports = class TransportCommon {
+module.exports = class Transport {
 
     constructor({ uri }) {
         this.uri = uri

@@ -1,8 +1,12 @@
 'use strict';
 
-var TransportReddit = require( './transport/reddit' );
-var TransportGitHub = require( './transport/github' );
+var URL = require( 'url' );
+var FS = require( 'fibers/future' ).wrap( require( 'fs' ) );
+
+var DefaultTransport = require( './transport.js' );
+
 var CollationList = require( './collation/list' );
+
 var PrinterJSON = require( './printer/json' );
 var PrinterDSV = require( './printer/dsv' );
 var PrinterSQL = require( './printer/sql' );
@@ -48,13 +52,20 @@ module.exports = class App {
 
             switch( action ) {
 
-                case 'reddit' :
-                    var transport = new TransportReddit({ uri : value });
-                    table = transport.fetchTable();
-                    break;
+                case 'source' :
+                    var host = URL.parse( value ).host;
+                    var path = `./transport/${host}.js`;
 
-                case 'github' :
-                    var transport = new TransportGitHub({ uri : value });
+                    try {
+                        FS.accessFuture( path ).wait();
+                        var exists = true;
+                    } catch( error ) {
+                        var exists = false;
+                    }
+
+                    var Transport = exists ? require( path ) : DefaultTransport;
+                    var transport = new Transport({ uri : value });
+
                     table = transport.fetchTable();
                     break;
 
