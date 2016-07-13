@@ -21,7 +21,7 @@ To add another service support just add file to [./transport](transport).
 * `format=json` - [JSON](https://en.wikipedia.org/wiki/JSON)
 * `format=csv` - [CSV](https://en.wikipedia.org/wiki/Comma-separated_values)
 * `format=tsv` - [TSV](https://en.wikipedia.org/wiki/Tab-separated_values)
-* `format=ssv` - [DSV](https://en.wikipedia.org/wiki/Delimiter-separated_values) with semicolon separator.
+* `format=ssv` - [DSV](https://en.wikipedia.org/wiki/Delimiter-separated_values) with semicolon separator - *default*.
 * `format=sql` - [SQL](https://en.wikipedia.org/wiki/SQL). You can specify name of table by `name={name}` operator before.
 
 ### Supported transformers
