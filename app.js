@@ -13,30 +13,12 @@ var PrinterSQL = require( './printer/sql' );
 
 module.exports = class App {
 
-    constructor({ argv , args }) {
+    constructor({ argv }) {
         this._argv = argv;
-        this._args = args;
     }
 
     argv() {
         return this._argv;
-    }
-
-    args() {
-        if( this._args ) return this._args;
-
-        this._args = {};
-
-        this.argv().forEach( arg => {
-            var chunks = arg.match( /^(\w+)=(.*)$/ );
-            if( chunks ) {
-                this._args[ chunks[1] ] = chunks[2];
-            } else {
-                this._args[ arg ] = true
-            }
-        } );
-
-        return this._args;
     }
 
     run() {
