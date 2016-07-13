@@ -10,6 +10,7 @@ Every argument is operator like `{operator}={parameter}`.
 
 * [api.github.com](https://developer.github.com/v3/).
 * [www.reddit.com](https://www.reddit.com/dev/api/).
+* [api.vk.com](https://new.vk.com/dev/)
 
 `source={uri}` - load data from service. 
 
