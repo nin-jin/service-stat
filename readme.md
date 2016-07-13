@@ -60,20 +60,20 @@ You can use some functions to evaluate value: `group=author project=author,last!
 Top 10 "jin" users on GitHub:
 
 ```
-node . reddit=http://www.reddit.com/r/javascript/.json order=created_utc< group=domain project=domain,count!id,sum!score,last!author order=count!id>sum!score> name=domains_stat format=sql
+node . github=https://api.github.com/search/users?q=jin project=score,login order=score> top=10 format=tsv
 ```
 
 ```
-91.7193 "jin"
-26.150711       "jingle1267"
-25.047386       "milooy"
-25.047386       "jinchung"
-24.929346       "jinthagerman"
-23.631184       "jinpark"
-21.813177       "ScorpiusJin"
-21.156439       "zhoushanjinjie"
-20.677286       "jinmingjian"
-20.677286       "nin-jin"
+91.722244       "jin"
+26.147049       "jingle1267"
+25.046482       "milooy"
+25.046482       "jinchung"
+24.930595       "jinthagerman"
+23.604176       "jinpark"
+21.81427        "ScorpiusJin"
+21.157093       "zhoushanjinjie"
+20.653654       "jinmingjian"
+20.653654       "nin-jin"
 ```
 
 Popular domains in "javascript" subreddit in SQL format:
