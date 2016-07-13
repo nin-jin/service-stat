@@ -8,8 +8,8 @@ Every argument is operator like `{operator}={parameter}`.
 
 ### Supported services
 
-* [api.github.com](https://developer.github.com/v3/).
-* [www.reddit.com](https://www.reddit.com/dev/api/).
+* [api.github.com](https://developer.github.com/v3/)
+* [www.reddit.com](https://www.reddit.com/dev/api/)
 * [api.vk.com](https://new.vk.com/dev/)
 
 `source={uri}` - load data from service. 
@@ -64,9 +64,7 @@ Top 10 "jin" users on GitHub:
 
 ```
 node . source=https://api.github.com/search/users?q=jin project=score,login order=score> top=10 format=tsv
-```
 
-```
 91.722244       "jin"
 26.147049       "jingle1267"
 25.046482       "milooy"
@@ -83,9 +81,7 @@ Popular domains in "javascript" subreddit in SQL format:
 
 ```
 node . source=http://www.reddit.com/r/javascript/.json group=domain project=domain,count!id,sum!score order=count!id>sum!score> name=domains_stat format=sql
-```
 
-```
 INSERT INTO domains_stat (`domain`,`count!id`,`sum!score`) VALUES( "self.javascript",12,121 );
 INSERT INTO domains_stat (`domain`,`count!id`,`sum!score`) VALUES( "github.com",2,70 );
 INSERT INTO domains_stat (`domain`,`count!id`,`sum!score`) VALUES( "theodo.fr",1,164 );
