@@ -14,6 +14,8 @@ Every argument is operator like `{operator}={parameter}`.
 
 `source={uri}` - load data from service. 
 
+To add another service support just add file to [./transport](transport).
+
 ### Supported output formats
 
 * `format=json` - [JSON](https://en.wikipedia.org/wiki/JSON)
@@ -97,3 +99,10 @@ INSERT INTO domains_stat (`domain`,`count!id`,`sum!score`) VALUES( "reddit.com",
 INSERT INTO domains_stat (`domain`,`count!id`,`sum!score`) VALUES( "philipwalton.com",1,4 );
 INSERT INTO domains_stat (`domain`,`count!id`,`sum!score`) VALUES( "maxencec.github.io",1,3 );
 ```
+
+## To do
+
+* Separate aggregation functions to files.
+* Filtering support.
+* [Tree format](https://github.com/nin-jin/tree.d) support.
+* Local sources support.
